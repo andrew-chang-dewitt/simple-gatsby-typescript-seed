@@ -1,0 +1,9 @@
+node_modules/
+
+*.swp
+*.swo
+
+.nyc_output
+
+.cache/
+public/

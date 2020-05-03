@@ -1,0 +1,82 @@
+{
+  "name": "simple-gatsby-typescript-seed",
+  "version": "0.1.0",
+  "description": "gatsby + typescript skeleton with istanbul+mocha+chai+enzyme testing & type-checking by running tests through ts-node instead of babel build pipeline",
+  "main": "",
+  "scripts": {
+    "format": "prettier --write './(*.html|*.js|*.json|src/**/*.ts|src/**/*.tsx)'",
+    "test": "mocha",
+    "coverage": "nyc npm run test",
+    "dev": "gatsby develop",
+    "prebuild": "npm run format && npm run coverage",
+    "build": "gatsby build",
+    "prestart": "npm run build",
+    "start": "gatsby serve"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "printWidth": 80,
+    "semi": false
+  },
+  "nyc": {
+    "all": true,
+    "reporter": [
+      "text"
+    ],
+    "check-coverage": true,
+    "lines": 100,
+    "functions": 100,
+    "branches": 100,
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.tsx"
+    ],
+    "exclude": [
+      "**/public/**",
+      "**/*.spec.ts",
+      "**/*.spec.tsx"
+    ]
+  },
+  "mocha": {
+    "extension": [
+      "ts",
+      "tsx"
+    ],
+    "spec": [
+      "src/**/*.spec.tsx",
+      "src/**/*.spec.ts"
+    ],
+    "require": "ts-node/register"
+  },
+  "author": "Andrew Chang-DeWitt",
+  "license": "MIT",
+  "dependencies": {
+    "gatsby": "^2.21.9",
+    "gatsby-plugin-typescript": "^2.4.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/enzyme": "^3.10.5",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/mocha": "^7.0.2",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "chai": "^4.2.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "gatsby-cli": "^2.12.7",
+    "mocha": "^7.1.2",
+    "nyc": "^15.0.1",
+    "prettier": "^2.0.5",
+    "ts-node": "^8.9.1",
+    "typescript": "^3.8.3"
+  }
+}
