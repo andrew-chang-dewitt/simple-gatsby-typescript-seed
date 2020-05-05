@@ -1,9 +1,17 @@
+# npm stuff
 node_modules/
 
+# vim stuff
 *.swp
 *.swo
 
+# nyc code coverage
 .nyc_output
 
+# gatsby
 .cache/
 public/
+
+# gatsby-plugin-codegen for Typescript graphql types
+apollo.config.js
+schema.json
