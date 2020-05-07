@@ -13,11 +13,11 @@ interface Props {
   post: Post
 }
 
-export const PostSummary = (props: Props) => (
-  <Link to={props.post.slug}>
+export const PostSummary = ({ post }: Props) => (
+  <Link to={post.slug}>
     <h3>
-      {props.post.title} - {props.post.date}
+      {post.title} - {post.date}
     </h3>
-    <p>{props.post.excerpt}</p>
+    <p>{post.excerpt}</p>
   </Link>
 )
