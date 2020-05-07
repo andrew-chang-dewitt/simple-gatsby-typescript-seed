@@ -1,13 +1,12 @@
 import React from 'react'
 
 import { Layout } from '../components/Layout'
-
-const world: string = 'world'
+import { Home as HomeComponent } from '../components/Home'
 
 export default function Home() {
   return (
     <Layout pageTitle="Home">
-      <h1>Hello {world}!</h1>
+      <HomeComponent />
     </Layout>
   )
 }
