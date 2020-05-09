@@ -5,7 +5,12 @@ module.exports = {
     title: 'Andrew Chang-DeWitt',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: { implementation: require('sass') },
+    },
     'gatsby-plugin-typescript',
+    'gatsby-transformer-typescript-css-modules',
     {
       resolve: 'gatsby-plugin-codegen',
       options: {},
