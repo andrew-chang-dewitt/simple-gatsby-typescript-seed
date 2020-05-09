@@ -1,20 +1,18 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 
-export interface LayoutProps {
+import styles from './Layout.module.sass'
+
+export interface Props {
   pageTitle: string
 }
 
-export class Layout extends React.Component<LayoutProps, {}> {
-  render() {
-    return (
-      <div>
-        <div id="header">
-          <h1>
-            Hello: <span id="pageTitle">{this.props.pageTitle}</span>
-          </h1>
-        </div>
-        <div id="content">{this.props.children}</div>
-      </div>
-    )
-  }
-}
+export const Layout: FunctionComponent<Props> = ({ pageTitle, children }) => (
+  <div>
+    <div className={styles.header}>
+      <h1>
+        Hello: <span className={styles.pageTitle}>{pageTitle}</span>
+      </h1>
+    </div>
+    <div className={styles.content}>{children}</div>
+  </div>
+)
