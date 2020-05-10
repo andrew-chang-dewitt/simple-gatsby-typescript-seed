@@ -14,6 +14,17 @@ Some more information. It includes
 > a block quote
 > about nothing.
 
+And some really bad `code`, if you want to all it that.
+
+```typescript
+
+import { Something } from 'something'
+
+Something.wow((wowzers) => {
+  console.log('a string' + wowzers)
+})
+```
+
 As well as an unordered
 
 - list
@@ -27,7 +38,7 @@ and an ordered
 3. more
 4. nonsense
 
-and a link [to Google](google.com), I guess.
+and a link [to Google](https://google.com), I guess.
 
 Plus, image!
 
