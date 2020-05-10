@@ -60,7 +60,10 @@
       "src/**/*.spec.tsx",
       "src/**/*.spec.ts"
     ],
-    "require": [ "ts-node/register", "ignore-styles" ]
+    "require": [
+      "ts-node/register",
+      "ignore-styles"
+    ]
   },
   "author": "Andrew Chang-DeWitt",
   "license": "MIT",
